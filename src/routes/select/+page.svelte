@@ -3,7 +3,9 @@
     import { onMount } from "svelte";
     import { page } from "$app/stores";
     import Button from "../../shared/components/Button.svelte";
-    import { setCookie } from "../../shared/helper/CookieManager"
+    import { getCookie, setCookie } from "../../shared/helper/CookieManager"
+
+    let playedWeeklyPopUp = $state(false);
 
     let selectGameMode;
     let nicknameInput;
@@ -24,9 +26,13 @@
     });
 
     const startGame = async () => {
-        console.log("start")
         gameMode = selectGameMode.value;
         nickname = nicknameInput.value;
+
+        if (gameMode === "weekly" && getCookie("playedWeekly") === "1") {
+            playedWeeklyPopUp = true;
+            return;
+        }
 
         const response = await fetch("http://localhost:3001/api/create_match", {
             method: "POST",
@@ -44,10 +50,10 @@
         }
 
         const json = await response.json();
-        console.log(json)
         
         setCookie("game_session_id", json.game_session_id, 1);
         setCookie("game_mode", gameMode, 1);
+        setCookie("playedWeekly", "1");
 
         window.location.href = "/game";
     }
@@ -57,6 +63,9 @@
         display: flex;
         justify-content: space-evenly;
         padding: 0px 16px 0px 16px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
     }
 
     .content > div {
@@ -104,3 +113,12 @@
         </div>
     </div>
 </div>
+{#if playedWeeklyPopUp}
+    <div class="pop_up_bg"></div>
+    <div class="pop_up played_weekly_pop_up">
+        <div class="pop_up_heading">
+            You already played weekly challenge this week!
+        </div>
+        <Button text="Close" action={() => {playedWeeklyPopUp = false}} />
+    </div>
+{/if}

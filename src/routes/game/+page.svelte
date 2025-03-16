@@ -33,7 +33,7 @@
 
     let mapPanzoom;
     let mapPin;
-    let pinLocation = [0, 0];
+    let pinLocation = [MAP_LENGTH / 2, MAP_LENGTH / 2];
     let zoomLevel = 1.0;
 
     const updatePinZoom = () => {
@@ -97,6 +97,8 @@
     const drawResultMap = () => {
         resultMapCtx = resultMap.getContext("2d");
         resultMapCtx.drawImage(mapImage, 0, 0, mapImage.width, mapImage.height);
+        resultMapCtx.lineWidth = 40;
+        resultMapCtx.strokeStyle = "#ff0049";
 
         const answerCoords = [
             (answerLocation.x / MAP_LENGTH) * mapImage.width,
@@ -106,11 +108,22 @@
             (pinLocation[0] / MAP_LENGTH) * mapImage.width,
             (pinLocation[1] / MAP_LENGTH) * mapImage.height
         ];
+
+        // Line
         resultMapCtx.beginPath();
         resultMapCtx.moveTo(...answerCoords);
         resultMapCtx.lineTo(...inputCoords);
-        resultMapCtx.lineWidth = 40;
-        resultMapCtx.strokeStyle = "#ff0000";
+        resultMapCtx.stroke();
+        resultMapCtx.beginPath();
+        resultMapCtx.arc(inputCoords[0], inputCoords[1], 1, 0, 2 * Math.PI);
+        resultMapCtx.stroke();
+        resultMapCtx.beginPath();
+        resultMapCtx.arc(answerCoords[0], answerCoords[1], 1, 0, 2 * Math.PI);
+        resultMapCtx.stroke();
+
+        // Start/end
+        resultMapCtx.beginPath();
+        resultMapCtx.arc(answerCoords[0], answerCoords[1], 120, 0, 2 * Math.PI);
         resultMapCtx.stroke();
     }
     
@@ -158,7 +171,6 @@
             return;
         }
         
-        console.log("round", round, maxRound)
         if (round == maxRound) {
             fetch("http://localhost:3001/api/submit_match", {
                 method: "POST",
@@ -237,10 +249,10 @@
                 "game_session_id": getCookie("game_session_id"),
                 "game_mode": gameMode,
                 "location": {
+                    "place": 0,
                     "x": pinLocation[0],
                     "y": pinLocation[1]
                 },
-                "place": "",
                 "year": yearInputValue
             })
         }).then(response => {
@@ -298,8 +310,10 @@
     #image {
         max-width: 100%;
         max-height: 100%;
-        background-size: cover;
-        margin: auto;
+        object-fit: contain;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
         pointer-events: none;
     }
 
@@ -364,26 +378,48 @@
         pointer-events: none;
     }
 
-    .score_menu_bg {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        opacity: 0.5;
+    .score_menu {
+
     }
 
-    .score_menu {
-        position: fixed;
-        width: 500px;
-        height: 70%;
-        background-color: white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+    .score_menu > .score_menu_heading {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    .score_menu > .score_menu_score > .score_menu_score_label {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    .score_menu > .score_menu_score > .score_menu_score_value {
+        font-size: 64px;
+        font-weight: 900;
+    }
+
+    .score_menu > .score_menu_round_score {
+        display: block;
+    }
+
+    .score_menu > .score_menu_round_score > .score_menu_score_label {
+        display: inline;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .score_menu > .score_menu_round_score > .score_menu_score_value {
+        display: inline;
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+
+    .score_menu > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        gap: 16px;
     }
 
     #resultMap {
@@ -429,13 +465,11 @@
     </div>
 </div>
 {#if roundScoreMenu}
-    <div class="score_menu_bg"></div>
-    <div class="score_menu">
-        <div>
-            Result
-        </div>
-        <div>
-            Round score: {score}
+    <div class="pop_up_bg"></div>
+    <div class="pop_up score_menu">
+        <div class="score_menu_round_score">
+            <div class="score_menu_score_label">Round score: </div>
+            <div class="score_menu_score_value">{score}</div>
         </div>
         <div>
             <canvas id="resultMap" bind:this={resultMap} use:onCanvasLoad width=4354 height=4354 />
@@ -452,13 +486,14 @@
     </div>
 {/if}
 {#if matchScoreMenu}
-    <div class="score_menu_bg"></div>
-    <div class="score_menu">
-        <div>
-            Match Result
+    <div class="pop_up_bg"></div>
+    <div class="pop_up score_menu">
+        <div class="score_menu_heading">
+            Game completed!
         </div>
-        <div>
-            Total score: {totalScore}
+        <div class="score_menu_score">
+            <div class="score_menu_score_label">Total score:</div>
+            <div class="score_menu_score_value">{totalScore}</div>
         </div>
         <div>
             <Button text="Try Again" action={() => {location.href = "/select"}} />

@@ -128,7 +128,7 @@ app.post("/api/round_image", (req, res) => {
     // Select new random image
     let imageName = "";
     let imageNameFound = false;
-    const images = fs.readdirSync(`${__dirname}/images/${gameMode}/`);
+    const images = Object.keys(locations[gameMode]);
     while (!imageNameFound) {
         imageName = images[Math.floor(Math.random() *  images.length)];
         if (!activeGames[gameMode][sessionId].history.includes(imageName)) {
@@ -168,19 +168,27 @@ app.post("/api/submit_round", (req, res) => {
     // Calculating score:
     // If place is correct, `place_score` points are added
     // Then, any distance to the correct point is added based on `distance_score`
+    let score = 0;
     const imageName = activeGames[gameMode][sessionId].history.at(-1);
     const locationGuess = json.location;
     const locationAnswer = locations[gameMode][imageName].location;
+
+    const placeScore = locationGuess.place === locationAnswer.place ? settings[gameMode].place_score : 0;
+    score += placeScore;
+
     const distance = Math.sqrt((locationGuess.x - locationAnswer.x) * (locationGuess.x - locationAnswer.x) + (locationGuess.y - locationAnswer.y) * (locationGuess.y - locationAnswer.y));
-    const placeScore = true ? settings.general.place_score : 0;
-    const distanceScore = settings.general.distance_score * Math.max(0, (settings.general.max_distance - distance) / settings.general.max_distance);
+    const distanceScore = placeScore > 0 ? settings[gameMode].distance_score * Math.max(0, (settings.general.max_distance - distance) / settings.general.max_distance) : 0;
+    score += distanceScore;
+
     let yearAnswer = 0;
     let timeScore = 0;
     if (gameMode == "time_travel") {
         yearAnswer = locations[gameMode][imageName].date.year;
-        timeScore = Math.max(1.0 - (Math.abs(json.year - yearAnswer) / settings.general.max_time_radius), 0) * settings.general.time_score;
+        timeScore = Math.max(1.0 - (Math.abs(json.year - yearAnswer) / settings.general.max_time_radius), 0) * settings.time_travel.time_score;
+        score += timeScore;
     }
-    const score = Math.floor(placeScore + distanceScore + timeScore);
+
+    score = Math.floor(score);
 
     activeGames[gameMode][sessionId].score += score;
     activeGames[gameMode][sessionId].round_iterator++;
