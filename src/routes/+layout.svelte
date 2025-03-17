@@ -11,6 +11,7 @@
         max-height: 32px;
         background-color: green;
         padding: 8px;
+        z-index: 99;
     }
 
     nav > div {
