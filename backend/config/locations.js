@@ -436,7 +436,277 @@ export default {
             "date": {
                 "year": 2012
             }
-        }
+        },
+        // "_MG_2600.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2011
+        //     }
+        // },
+        // "Robotics_Engineering_Ph17.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2013
+        //     }
+        // },
+        // "Angelou_DC.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1993
+        //     }
+        // },
+        // "Photo11.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1996
+        //     }
+        // },
+        // "Sagan_DC.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1991
+        //     }
+        // },
+        // "Scan_10.jpeg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2000
+        //     }
+        // },
+        // "Scan_18.jpeg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2000
+        //     }
+        // },
+        // "IMG_2841.JPG": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2016
+        //     }
+        // },
+        // "IMG_2842.JPG": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2016
+        //     }
+        // },
+        // "phone_booth_room.JPG": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2016
+        //     }
+        // },
+        // "learning_lab.JPG": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2016
+        //     }
+        // },
+        // "Scan_8.jpeg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2000
+        //     }
+        // },
+        // "Scan_12.jpeg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2000
+        //     }
+        // },
+        // "Scan_13.jpeg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2000
+        //     }
+        // },
+        // "Scan_20.jpeg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2000
+        //     }
+        // },
+        // "MarkCarlson.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2017
+        //     }
+        // },
+        // "Scan_21.png": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1986
+        //     }
+        // },
+        // "Scan_12.png": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1989
+        //     }
+        // },
+        // "Scan_26.png": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1989
+        //     }
+        // },
+        // "Scan_23.png": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1989
+        //     }
+        // },
+        // "DSC_0255.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2013
+        //     }
+        // },
+        // "Chicago_Field_Office_Re_Opening_1212_043.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2013
+        //     }
+        // },
+        // "TALENT_with_Sam_Yegan.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2013
+        //     }
+        // },
+        // "_DX_7616.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2015
+        //     }
+        // },
+        // "IMSA_Teacher_Students_Lab.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 2004
+        //     }
+        // },
+        // "Grainger_LabDC.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1998
+        //     }
+        // },
+        // "Tellabs_Studio_for_Professional_DevelopmentDC.jpg": {
+        //     "location": {
+        //         "place": 0,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        //     "date": {
+        //         "year": 1998
+        //     }
+        // }
     },
     "weekly": {
         "20250130_164538.jpg": {
