@@ -3,7 +3,9 @@
     import { onMount } from "svelte";
     import { page } from "$app/stores";
     import Button from "../../shared/components/Button.svelte";
-    import { getCookie, setCookie } from "../../shared/helper/CookieManager"
+    import { getCookie, setCookie } from "../../shared/helper/CookieManager";
+    
+    let SERVER_HOST = "";
 
     let playedWeeklyPopUp = $state(false);
 
@@ -15,7 +17,10 @@
 
     const gameModeParam = $page.url.searchParams.get("mode");
 
-    onMount(() => {
+    onMount(async () => {
+        SERVER_HOST = await (await fetch("/server_host")).text();
+        console.log(SERVER_HOST)
+
         if (gameModeParam != undefined) {
             const gameModes = ["standard", "time_travel", "weekly"];
             const index = gameModes.indexOf(gameModeParam);
@@ -34,7 +39,7 @@
             return;
         }
 
-        const response = await fetch("http://localhost:3001/api/create_match", {
+        const response = await fetch(`${SERVER_HOST}/api/create_match`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

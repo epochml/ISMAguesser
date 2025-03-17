@@ -2,9 +2,10 @@
 <script>
     import { onMount } from 'svelte';
     import Button from "../../shared/components/Button.svelte";
-    import panzoom from 'panzoom'
+    import panzoom from 'panzoom';
     import { getCookie } from '../../shared/helper/CookieManager';
-
+    
+    let SERVER_HOST = "";
     const MAP_LENGTH = $state(256);
 
     let imageLink = $state("");
@@ -57,7 +58,9 @@
         });
     }
 
-    onMount(() => {
+    onMount(async () => {
+        SERVER_HOST = await (await fetch("/server_host")).text();
+
         gameMode = getCookie("game_mode");
 
         let styleObserver = new MutationObserver((mutations) => {
@@ -66,7 +69,7 @@
         });
         styleObserver.observe(mapPanzoom, { attributes : true, attributeFilter : ['style'] });
 
-        fetch("http://localhost:3001/api/match_info", {
+        fetch(`${SERVER_HOST}/api/match_info`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -146,7 +149,7 @@
     }, 1000);
 
     const updateImage = () => {
-        fetch("http://localhost:3001/api/round_image", {
+        fetch(`${SERVER_HOST}/api/round_image`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -172,7 +175,7 @@
         }
         
         if (round == maxRound) {
-            fetch("http://localhost:3001/api/submit_match", {
+            fetch(`${SERVER_HOST}/api/submit_match`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -195,7 +198,7 @@
 
         score = 0;
 
-        fetch("http://localhost:3001/api/start_round", {
+        fetch(`${SERVER_HOST}/api/start_round`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -240,7 +243,7 @@
 
         roundEnded = true;
 
-        fetch("http://localhost:3001/api/submit_round", {
+        fetch(`${SERVER_HOST}/api/submit_round`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
