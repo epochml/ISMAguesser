@@ -1,7 +1,3 @@
-export const checkNickInput = (nickname) => {
-	return true;
-}
-
 export const randomID = (length) => {
 	let result = '';
 	const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -15,3 +11,11 @@ export const randomID = (length) => {
 }
 
 export const getEpochUTC = () => new Date().getTime();
+
+export const sanitizeNickname = nickname => {
+	const alphanumericWithSpace = nickname.replace(/[^\w\s]/gi, "");
+	if (!(/[a-zA-Z0-9_]/g).test(alphanumericWithSpace)) {
+		return "anonymous";
+	}
+	return alphanumericWithSpace;
+}

@@ -5,9 +5,10 @@ import fs from "fs";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
-import { randomID, checkNickInput, getEpochUTC } from "./helper.js";
+import { randomID, getEpochUTC, sanitizeNickname } from "./helper.js";
 import settings from "./config/settings.js";
 import locations from "./config/locations.js";
+import { addWeeklyLeaderboardEntry, getWeeklyLeaderboardTop10 } from './db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,8 +29,9 @@ let activeGames = {
 app.post("/api/create_match", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     const json = req.body;
+    const sanitizedNickname = sanitizeNickname(json.nickname);
 
-    if (!Object.keys(activeGames).includes(json.game_mode) || !checkNickInput(json.nickname)) {
+    if (!Object.keys(activeGames).includes(json.game_mode)) {
         res.status(400).send("");
         return;
     }
@@ -37,7 +39,7 @@ app.post("/api/create_match", (req, res) => {
     const sessionId = randomID(16);
     const gameData = {
         "end_time": getEpochUTC() + settings[json.game_mode].time * 1000,
-        "nickname": json.nickname,
+        "nickname": sanitizedNickname,
         "round_iterator": 0,
         "total_rounds": settings[json.game_mode].rounds,
         "history": [],
@@ -224,15 +226,27 @@ app.post("/api/submit_match", (req, res) => {
     }
 
     // Adding to leaderboard
-
+    const gameData = activeGames[gameMode][sessionId];
+    addWeeklyLeaderboardEntry(gameMode, gameData.nick, gameData.score);
 
     // Sending back match info
     res.end(JSON.stringify({
-        "game_data": activeGames[gameMode][sessionId]
+        "game_data": gameData
     }));
 
     // Remove match
     delete activeGames[gameMode][sessionId];
+});
+
+app.get("/api/leaderboard", async (req, res) => {
+    res.setHeader("Content-Type", "application/json");
+    const gameMode = req.query.mode;
+    if (gameMode === undefined || !Object.keys(activeGames).includes(gameMode)) {
+        res.status(400).send("");
+        return;
+    }
+    const leaderboard = await getWeeklyLeaderboardTop10(gameMode);
+    res.end(JSON.stringify(leaderboard));
 });
 
 app.listen(port, () => {
