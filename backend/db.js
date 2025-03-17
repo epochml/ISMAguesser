@@ -58,7 +58,13 @@ export const addWeeklyLeaderboardEntry = (gameMode, nickname, score) => {
 
 export const cleanWeeklyLeaderboard = () => {
     sendQuery(
-        "DROP TABLE WeeklyLeaderboard;",
+        `DROP TABLE WeeklyLeaderboard;
+        CREATE TABLE WeeklyLeaderboard (
+            game_mode text,
+            nickname text,
+            score int,
+            time_stamp timestamp without time zone
+        );`,
         []
     );
 }

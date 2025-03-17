@@ -13,7 +13,7 @@ export const randomID = (length) => {
 export const getEpochUTC = () => new Date().getTime();
 
 export const sanitizeNickname = nickname => {
-	const alphanumericWithSpace = nickname.replace(/[^\w\s]/gi, "");
+	const alphanumericWithSpace = nickname.replace(/[^\w\s]/gi, "").substring(0, 22);
 	if (!(/[a-zA-Z0-9_]/g).test(alphanumericWithSpace)) {
 		return "anonymous";
 	}

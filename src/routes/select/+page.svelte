@@ -19,7 +19,6 @@
 
     onMount(async () => {
         SERVER_HOST = await (await fetch("/server_host")).text();
-        console.log(SERVER_HOST)
 
         if (gameModeParam != undefined) {
             const gameModes = ["standard", "time_travel", "weekly"];
@@ -68,9 +67,6 @@
         display: flex;
         justify-content: space-evenly;
         padding: 0px 16px 0px 16px;
-        position: absolute;
-        transform: translateX(-50%);
-        left: 50%;
     }
 
     .content > div {

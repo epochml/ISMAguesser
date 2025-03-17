@@ -227,7 +227,7 @@ app.post("/api/submit_match", (req, res) => {
 
     // Adding to leaderboard
     const gameData = activeGames[gameMode][sessionId];
-    addWeeklyLeaderboardEntry(gameMode, gameData.nick, gameData.score);
+    addWeeklyLeaderboardEntry(gameMode, gameData.nickname, gameData.score);
 
     // Sending back match info
     res.end(JSON.stringify({
@@ -240,13 +240,12 @@ app.post("/api/submit_match", (req, res) => {
 
 app.get("/api/leaderboard", async (req, res) => {
     res.setHeader("Content-Type", "application/json");
-    const gameMode = req.query.mode;
-    if (gameMode === undefined || !Object.keys(activeGames).includes(gameMode)) {
-        res.status(400).send("");
-        return;
+    let leaderboards = {};
+    for (const gameMode of Object.keys(activeGames)) {
+        const leaderboard = await getWeeklyLeaderboardTop10(gameMode);
+        leaderboards[gameMode] = leaderboard;
     }
-    const leaderboard = await getWeeklyLeaderboardTop10(gameMode);
-    res.end(JSON.stringify(leaderboard));
+    res.end(JSON.stringify(leaderboards));
 });
 
 app.listen(port, () => {
