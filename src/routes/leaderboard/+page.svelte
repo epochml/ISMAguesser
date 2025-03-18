@@ -47,10 +47,34 @@
     .leaderboard > .leaderboard_item > div {
         display: inline-block;
         position: relative;
-        /* float: right; */
-    margin-right: 64px;
-    width: 100px;
-    /* text-align: right; */
+        margin-right: 64px;
+        width: 100px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .content {
+            width: 100%;
+            height: fit-content;
+            margin: 0px;
+            flex-direction: column;
+            padding: 32px 0px 128px 0px;
+        }
+
+        
+        .leaderboard > .leaderboard_item > div {
+            margin-right: 64px;
+            width: 100px;
+        }
+
+        .leaderboard > .leaderboard_item > div:first-child {
+            margin-right: 0px;
+            width: 60px;
+        }
+
+        .leaderboard > .leaderboard_item > div:last-child {
+            margin-right: 0px;
+            width: 60px;
+        }
     }
 </style>
 <div class="content">

@@ -45,6 +45,12 @@
     #profile_link {
         display: inline-block;
     }
+
+    @media only screen and (max-width: 768px) {
+        nav, #nav_padding {
+            display: none;
+        }
+    }
 </style>
 
 <nav>

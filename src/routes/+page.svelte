@@ -54,11 +54,27 @@
         flex-direction: column;
         gap: 0px;
     }
+
+    @media only screen and (max-width: 768px) {
+        h1 {
+            font-size: 48px;
+        }
+
+        .buttons {
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        .stats {
+            font-size: 12px;
+            padding: 8px;
+        }
+    }
 </style>
 <div class="fullsize_content">
     <div class="intro flex_container">
         <h1>Welcome to ISMAguesser!</h1>
-        <div class="flex_container">
+        <div class="buttons flex_container">
             <Button text="Play" action={() => {location.href = "/select"}} style="backdrop-filter: blur(10px);" />
             <Button text="Weekly Challenge" action={() => {location.href = "/select?mode=weekly"}} style="backdrop-filter: blur(10px);" />
             <Button text="Top Scores" action={() => {location.href = "/leaderboard"}} style="backdrop-filter: blur(10px);" />

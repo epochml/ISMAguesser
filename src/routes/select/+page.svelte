@@ -84,6 +84,16 @@
     #nickname_input {
         outline: none;
     }
+
+    @media only screen and (max-width: 768px) {
+        .content {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            flex-direction: column;
+            padding: 32px 0px 128px 0px;
+        }
+    }
 </style>
 <div class="content">
     <div>

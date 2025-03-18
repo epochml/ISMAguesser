@@ -381,6 +381,38 @@
         pointer-events: none;
     }
 
+    .year_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .year_container > #year_input {
+        width: 90%;
+        height: 16px;
+        -webkit-appearance: none;
+        background: gray;
+        outline: none;
+        border-radius: 8px;
+    }
+
+    .year_container > #year_input::-moz-range-thumb, .year_container > #year_input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: green;
+        cursor: pointer;
+        outline: none;
+        border-radius: 12px;
+    }
+
+    .year_container > div {
+        font-size: 20px;
+    }
+
     .score_menu {
 
     }
@@ -427,8 +459,47 @@
 
     #resultMap {
         width: 400px;
-        height: 400px;
+        max-height: 400px;
         background-color: green;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .game_view {
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            margin: 0px;
+            flex-direction: column;
+        }
+
+        .image_container {
+            padding: 8px;
+            height: 50%;
+        }
+
+        .image_container > div {
+            width: 100%;
+        }
+
+        .info_container, .controls_container {
+            width: 100%;
+            padding: 16px 0px 32px 0px;
+            gap: 0px;
+        }
+
+        .map_container {
+            width: 90%;
+        }
+
+        .submit_button_container, .year_container {
+            padding: 16px;
+        }
+
+        #resultMap {
+            max-width: 90%;
+            height: auto;
+            max-height: 500px;
+        }
     }
 </style>
 <div class="game_view">
@@ -460,11 +531,13 @@
         </div>
         {#if gameMode == "time_travel"}
             <div class="year_container">
-                <input id="year_input" type="range" bind:this={yearInput} bind:value={yearInputValue} min="1960" max="2025">
                 <div>{yearInputValue}</div>
+                <input id="year_input" type="range" bind:this={yearInput} bind:value={yearInputValue} min="1960" max="2025">
             </div>
         {/if}
-        <Button text="Submit" action={submitRound} />
+        <div class="submit_button_container">
+            <Button text="Submit" action={submitRound} />
+        </div>
     </div>
 </div>
 {#if roundScoreMenu}

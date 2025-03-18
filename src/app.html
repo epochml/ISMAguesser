@@ -13,9 +13,14 @@
 				
 			}
 
+            html {
+                overflow-x: hidden;
+            }
+
 			body {
 				margin: 0;
 				font-family: "Inter", sans-serif;
+                overflow-x: hidden;
 			}
 
 			a {
@@ -43,7 +48,8 @@
 			.pop_up {
 				position: fixed;
 				width: 500px;
-				height: 70%;
+				min-height: 80%;
+                max-height: fit-content;
 				background-color: white;
 				left: 50%;
 				top: 50%;
@@ -59,6 +65,14 @@
         		font-weight: 400;
 				text-align: center;
 			}
+            
+            @media only screen and (max-width: 768px) {
+                .pop_up {
+                    position: fixed;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
 		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
