@@ -1,14 +1,14 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from "cors";
-import fs from "fs";
+import fs from "fs/promises";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 import { randomID, getEpochUTC, sanitizeNickname } from "./helper.js";
 import settings from "./config/settings.js";
 import locations from "./config/locations.js";
-import { addWeeklyLeaderboardEntry, getWeeklyLeaderboardTop10 } from './db.js';
+import { addWeeklyLeaderboardEntry, getStatistics, getWeeklyLeaderboardTop10 } from './db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -246,6 +246,17 @@ app.get("/api/leaderboard", async (req, res) => {
         leaderboards[gameMode] = leaderboard;
     }
     res.end(JSON.stringify(leaderboards));
+});
+
+app.get("/api/statistics", async (req, res) => {
+    res.setHeader("Content-Type", "application/json");
+    let stats = await getStatistics();
+    stats.images = 0;
+    for (const gameMode of Object.keys(activeGames)) {
+        let imagesDir = await fs.readdir(`${__dirname}/images/${gameMode}`);
+        stats.images += imagesDir.length;
+    }
+    res.end(JSON.stringify(stats));
 });
 
 app.listen(port, () => {

@@ -23,5 +23,5 @@
     }
 </style>
 <div>
-    <button onclick={props.action}>{props.text}</button>
+    <button style={props.style} onclick={props.action}>{props.text}</button>
 </div>

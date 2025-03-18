@@ -62,7 +62,3 @@
 <div id="nav_padding"></div>
 
 {@render children()}
-
-<footer>
-    
-</footer>

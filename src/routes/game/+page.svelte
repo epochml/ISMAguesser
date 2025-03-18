@@ -29,7 +29,7 @@
 
     let resultMap;
     let resultMapCtx;
-    let answerLocation = {x: 0, y: 0};
+    let answerLocation = {x: MAP_LENGTH / 2, y: MAP_LENGTH / 2};
     let answerPlace = "main";
 
     let mapPanzoom;

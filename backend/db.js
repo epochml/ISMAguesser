@@ -51,8 +51,12 @@ export const getWeeklyLeaderboardTop10 = (gameMode) => {
 
 export const addWeeklyLeaderboardEntry = (gameMode, nickname, score) => {
     sendQuery(
-        "INSERT INTO WeeklyLeaderboard VALUES ($1, $2, $3, NOW()::timestamp without time zone);",
+        `INSERT INTO WeeklyLeaderboard VALUES ($1, $2, $3, NOW()::timestamp without time zone);`,
         [gameMode, nickname, score]
+    );
+    sendQuery(
+        `UPDATE Statistics SET total_matches = total_matches + 1;`,
+        []
     );
 }
 
@@ -67,4 +71,15 @@ export const cleanWeeklyLeaderboard = () => {
         );`,
         []
     );
+}
+
+export const getStatistics  = async () => {
+    return new Promise(async resolve => {
+        const weeklyMatches = await sendQuery("SELECT COUNT(*) FROM WeeklyLeaderboard;");
+        const totalMatches = await sendQuery("SELECT * FROM Statistics;");
+        resolve({
+            "weekly_matches": Number(weeklyMatches[0].count),
+            "total_matches": totalMatches[0].total_matches
+        });
+    });
 }
