@@ -26,6 +26,10 @@ let activeGames = {
     "weekly": {}
 };
 
+app.get("/test", (req, res) => {
+    res.send("test");
+});
+
 app.post("/api/create_match", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     const json = req.body;
