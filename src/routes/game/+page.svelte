@@ -93,7 +93,7 @@
     let mapImage;
     const onCanvasLoad = () => {
         mapImage = new Image();
-        mapImage.src = "/images/main_f1.png";
+        mapImage.src = "/images/main_f1.webp";
         mapImage.onload = drawResultMap;
     }
 
@@ -368,7 +368,7 @@
     #map_background {
         width: 300px;
         height: 300px;
-        background: url("/images/main_f1.png");
+        background: url("/images/main_f1.webp");
         background-size: cover;
     }
 
