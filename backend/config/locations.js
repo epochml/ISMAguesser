@@ -7,323 +7,154 @@ export default {
                 "y": 27
             },
         },
-        "20250130_164153.jpg": {
+        "20250130_164153.webp": {
             "location": {
                 "place": 0,
                 "x": 93,
                 "y": 76
             },
         },
-        "20250130_164207.jpg": {
+        "20250130_164207.webp": {
             "location": {
                 "place": 0,
                 "x": 98,
                 "y": 74
             },
         },
-        "20250130_164218.jpg": {
+        "20250130_164218.webp": {
             "location": {
                 "place": 0,
                 "x": 101,
                 "y": 78
             },
         },
-        "20250130_164245.jpg": {
+        "20250130_164245.webp": {
             "location": {
                 "place": 0,
                 "x": 130,
                 "y": 82
             },
         },
-        "20250130_164324.jpg": {
+        "20250130_164324.webp": {
             "location": {
                 "place": 0,
                 "x": 150,
                 "y": 67
             },
         },
-        "20250130_164411.jpg": {
+        "20250130_164411.webp": {
             "location": {
                 "place": 0,
                 "x": 151,
                 "y": 41
             },
         },
-        "20250130_164459.jpg": {
+        "20250130_164459.webp": {
             "location": {
                 "place": 0,
                 "x": 164,
                 "y": 43
             },
         },
-        "20250130_164531.jpg": {
+        "20250130_164531.webp": {
             "location": {
                 "place": 0,
                 "x": 157,
                 "y": 27
             },
         },
-        "20250130_164605.jpg": {
+        "20250130_164605.webp": {
             "location": {
                 "place": 0,
                 "x": 166,
                 "y": 27
             },
         },
-        "20250130_164702.jpg": {
+        "20250130_164702.webp": {
             "location": {
                 "place": 0,
                 "x": 225,
                 "y": 30
             },
         },
-        "20250130_164714.jpg": {
+        "20250130_164714.webp": {
             "location": {
                 "place": 0,
                 "x": 230,
                 "y": 32
             },
         },
-        "20250130_164718.jpg": {
+        "20250130_164718.webp": {
             "location": {
                 "place": 0,
                 "x": 229,
                 "y": 32
             },
         },
-        "20250130_165718.jpg": {
+        "20250130_165718.webp": {
             "location": {
                 "place": 0,
                 "x": 43,
                 "y": 25
             },
         },
-        "20250130_164741.jpg": {
+        "20250130_164741.webp": {
             "location": {
                 "place": 0,
                 "x": 225,
                 "y": 32
             },
         },
-        "20250130_164805.jpg": {
+        "20250130_164805.webp": {
             "location": {
                 "place": 0,
                 "x": 199,
                 "y": 54
             },
         },
-        "20250130_164849.jpg": {
+        "20250130_164849.webp": {
             "location": {
                 "place": 0,
                 "x": 205,
                 "y": 70
             },
         },
-        "20250130_165415.jpg": {
+        "20250130_165415.webp": {
             "location": {
                 "place": 0,
                 "x": 143,
                 "y": 84
             },
         },
-        "20250130_165423.jpg": {
+        "20250130_165423.webp": {
             "location": {
                 "place": 0,
                 "x": 143,
                 "y": 93
             },
         },
-        "20250130_165603.jpg": {
+        "20250130_165603.webp": {
             "location": {
                 "place": 0,
                 "x": 57,
                 "y": 36
             },
         },
-        "20250130_165626.jpg": {
+        "20250130_165626.webp": {
             "location": {
                 "place": 0,
                 "x": 38,
                 "y": 36
             },
         }
-        // "20250130_164824.jpg": {
+        // "20250130_164824.webp": {
         //     "location": {
         //         "place": -1,
         //         "x": -1,
         //         "y": -1
         //     },
         // },
-        // "20250130_164510.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        
-        // "20250130_164441.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_164918.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165036.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165056.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165109.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165126.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165204.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165431.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165618.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165639.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165650.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165657.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165704.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165747.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165819.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165839.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165847.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165905.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_165921.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "Screenshot 2025-03-15 190709.png": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_164255.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_164301.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_164628.jpg": {
-        //     "location": {
-        //         "place": -1,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        // },
-        // "20250130_164642.jpg": {
+        // "20250130_164510.webp": {
         //     "location": {
         //         "place": -1,
         //         "x": -1,
@@ -331,14 +162,183 @@ export default {
         //     },
         // },
         
-        // "20250130_164334.jpg": {
+        // "20250130_164441.webp": {
         //     "location": {
         //         "place": -1,
         //         "x": -1,
         //         "y": -1
         //     },
         // },
-        // "20250130_164356.jpg": {
+        // "20250130_164918.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165036.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165056.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165109.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165126.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165204.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165431.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165618.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165639.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165650.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165657.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165704.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165747.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165819.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165839.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165847.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165905.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_165921.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "Screenshot 2025-03-15 190709.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_164255.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_164301.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_164628.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_164642.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        
+        // "20250130_164334.webp": {
+        //     "location": {
+        //         "place": -1,
+        //         "x": -1,
+        //         "y": -1
+        //     },
+        // },
+        // "20250130_164356.webp": {
         //     "location": {
         //         "place": -1,
         //         "x": -1,
@@ -347,7 +347,7 @@ export default {
         // }
     },
     "time_travel": {
-        "FIRE-e1382664030922-768x1024.jpg": {
+        "FIRE-e1382664030922-768x1024.webp": {
             "location": {
                 "place": 0,
                 "x": 103,
@@ -357,7 +357,7 @@ export default {
                 "year": 2013
             }
         },
-        "IMG_2011.jpg": {
+        "IMG_2011.webp": {
             "location": {
                 "place": 0,
                 "x": 88,
@@ -367,7 +367,7 @@ export default {
                 "year": 2013
             }
         },
-        "DSC_0018-iloveimg-compressed-777x437.jpg": {
+        "DSC_0018-iloveimg-compressed-777x437.webp": {
             "location": {
                 "place": 0,
                 "x": 94,
@@ -377,7 +377,7 @@ export default {
                 "year": 2017
             }
         },
-        "334892048_881833539770027_4890376439111269244_n-1-300x225.jpg": {
+        "334892048_881833539770027_4890376439111269244_n-1-300x225.webp": {
             "location": {
                 "place": 0,
                 "x": 121,
@@ -387,7 +387,7 @@ export default {
                 "year": 2023
             }
         },
-        "ClubFair.jpg": {
+        "ClubFair.webp": {
             "location": {
                 "place": 0,
                 "x": 80,
@@ -397,7 +397,7 @@ export default {
                 "year": 2015
             }
         },
-        "FIRE2-600x800.jpg": {
+        "FIRE2-600x800.webp": {
             "location": {
                 "place": 0,
                 "x": 77,
@@ -407,7 +407,7 @@ export default {
                 "year": 2013
             }
         },
-        "IMG_1230-777x437.jpg": {
+        "IMG_1230-777x437.webp": {
             "location": {
                 "place": 0,
                 "x": 65,
@@ -417,7 +417,7 @@ export default {
                 "year": 2018
             }
         },
-        "Screen-Shot-2023-03-06-at-10.25.13-PM-724x437.png": {
+        "Screen-Shot-2023-03-06-at-10.25.13-PM-724x437.webp": {
             "location": {
                 "place": 0,
                 "x": 132,
@@ -427,7 +427,7 @@ export default {
                 "year": 2023
             }
         },
-        "sodexo-600x450.jpg": {
+        "sodexo-600x450.webp": {
             "location": {
                 "place": 0,
                 "x": 108,
@@ -437,7 +437,7 @@ export default {
                 "year": 2012
             }
         },
-        // "_MG_2600.jpg": {
+        // "_MG_2600.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -447,7 +447,7 @@ export default {
         //         "year": 2011
         //     }
         // },
-        // "Robotics_Engineering_Ph17.jpg": {
+        // "Robotics_Engineering_Ph17.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -457,7 +457,7 @@ export default {
         //         "year": 2013
         //     }
         // },
-        // "Angelou_DC.jpg": {
+        // "Angelou_DC.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -467,7 +467,7 @@ export default {
         //         "year": 1993
         //     }
         // },
-        // "Photo11.jpg": {
+        // "Photo11.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -477,7 +477,7 @@ export default {
         //         "year": 1996
         //     }
         // },
-        // "Sagan_DC.jpg": {
+        // "Sagan_DC.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -487,7 +487,7 @@ export default {
         //         "year": 1991
         //     }
         // },
-        // "Scan_10.jpeg": {
+        // "Scan_10.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -497,7 +497,7 @@ export default {
         //         "year": 2000
         //     }
         // },
-        // "Scan_18.jpeg": {
+        // "Scan_18.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -507,7 +507,7 @@ export default {
         //         "year": 2000
         //     }
         // },
-        // "IMG_2841.JPG": {
+        // "IMG_2841.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -517,7 +517,7 @@ export default {
         //         "year": 2016
         //     }
         // },
-        // "IMG_2842.JPG": {
+        // "IMG_2842.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -527,7 +527,7 @@ export default {
         //         "year": 2016
         //     }
         // },
-        // "phone_booth_room.JPG": {
+        // "phone_booth_room.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -537,7 +537,7 @@ export default {
         //         "year": 2016
         //     }
         // },
-        // "learning_lab.JPG": {
+        // "learning_lab.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -547,7 +547,7 @@ export default {
         //         "year": 2016
         //     }
         // },
-        // "Scan_8.jpeg": {
+        // "Scan_8.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -557,7 +557,7 @@ export default {
         //         "year": 2000
         //     }
         // },
-        // "Scan_12.jpeg": {
+        // "Scan_12.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -567,7 +567,7 @@ export default {
         //         "year": 2000
         //     }
         // },
-        // "Scan_13.jpeg": {
+        // "Scan_13.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -577,7 +577,7 @@ export default {
         //         "year": 2000
         //     }
         // },
-        // "Scan_20.jpeg": {
+        // "Scan_20.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -587,7 +587,7 @@ export default {
         //         "year": 2000
         //     }
         // },
-        // "MarkCarlson.jpg": {
+        // "MarkCarlson.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -597,7 +597,7 @@ export default {
         //         "year": 2017
         //     }
         // },
-        // "Scan_21.png": {
+        // "Scan_21.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -607,7 +607,7 @@ export default {
         //         "year": 1986
         //     }
         // },
-        // "Scan_12.png": {
+        // "Scan_12.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -617,7 +617,7 @@ export default {
         //         "year": 1989
         //     }
         // },
-        // "Scan_26.png": {
+        // "Scan_26.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -627,7 +627,7 @@ export default {
         //         "year": 1989
         //     }
         // },
-        // "Scan_23.png": {
+        // "Scan_23.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -637,7 +637,7 @@ export default {
         //         "year": 1989
         //     }
         // },
-        // "DSC_0255.jpg": {
+        // "DSC_0255.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -647,7 +647,7 @@ export default {
         //         "year": 2013
         //     }
         // },
-        // "Chicago_Field_Office_Re_Opening_1212_043.jpg": {
+        // "Chicago_Field_Office_Re_Opening_1212_043.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -657,7 +657,7 @@ export default {
         //         "year": 2013
         //     }
         // },
-        // "TALENT_with_Sam_Yegan.jpg": {
+        // "TALENT_with_Sam_Yegan.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -667,7 +667,7 @@ export default {
         //         "year": 2013
         //     }
         // },
-        // "_DX_7616.jpg": {
+        // "_DX_7616.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -677,7 +677,7 @@ export default {
         //         "year": 2015
         //     }
         // },
-        // "IMSA_Teacher_Students_Lab.jpg": {
+        // "IMSA_Teacher_Students_Lab.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -687,7 +687,7 @@ export default {
         //         "year": 2004
         //     }
         // },
-        // "Grainger_LabDC.jpg": {
+        // "Grainger_LabDC.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -697,7 +697,7 @@ export default {
         //         "year": 1998
         //     }
         // },
-        // "Tellabs_Studio_for_Professional_DevelopmentDC.jpg": {
+        // "Tellabs_Studio_for_Professional_DevelopmentDC.webp": {
         //     "location": {
         //         "place": 0,
         //         "x": -1,
@@ -709,7 +709,7 @@ export default {
         // }
     },
     "weekly": {
-        "20250130_164538.jpg": {
+        "20250130_164538.webp": {
             "location": {
                 "place": 0,
                 "x": 157,
