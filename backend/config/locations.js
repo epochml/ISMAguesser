@@ -731,16 +731,16 @@ export default {
                 "year": 2000
             }
         },
-        // "Scan_20.webp": {
-        //     "location": {
-        //         "place": 0,
-        //         "x": -1,
-        //         "y": -1
-        //     },
-        //     "date": {
-        //         "year": 2000
-        //     }
-        // },
+        "Scan_20.webp": {
+            "location": {
+                "place": 0,
+                "x": 167,
+                "y": 30
+            },
+            "date": {
+                "year": 2000
+            }
+        },
         "MarkCarlson.webp": {
             "location": {
                 "place": 0,
