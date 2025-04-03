@@ -7,6 +7,7 @@
     
     let SERVER_HOST = "";
     const MAP_LENGTH = $state(256);
+    const LOADING_IMAGE = "/icons/loading.png";
 
     let imageLink = $state("");
     let timeVisual = $state("00:00");
@@ -149,6 +150,7 @@
     }, 1000);
 
     const updateImage = () => {
+        console.log("updating image")
         fetch(`${SERVER_HOST}/api/round_image`, {
             method: "POST",
             headers: {
@@ -197,6 +199,7 @@
         }
 
         score = 0;
+        imageLink = LOADING_IMAGE;
 
         fetch(`${SERVER_HOST}/api/start_round`, {
             method: "POST",
@@ -219,7 +222,7 @@
                 round = gameData.round_iterator + 1;
                 updateImage();
             }
-            updateImage();
+            // updateImage();
         });
     }
 
@@ -281,6 +284,10 @@
     }
 </script>
 <style>
+    :global(body) {
+        background-color: var(--background2);
+    }
+    
     .game_view {
         display: flex;
         position: fixed;
@@ -305,9 +312,9 @@
     .image_container > div {
         width: calc(100% - 64px);
         height: calc(100% - 64px);
-        background-color: aqua;
         padding: 16px;
         display: flex;
+        background-color: var(--background2);
     }
 
     #image {
@@ -322,7 +329,7 @@
 
     .controls_container {
         padding: 16px;
-        background-color: yellow;
+        background-color: var(--background2);
         width: 400px;
         display: flex;
         flex-direction: column;
@@ -357,7 +364,7 @@
     .map_container {
         width: 100%;
         height: 300px;
-        background-color: beige;
+        background-color: var(--background3);
         overflow: hidden;
     }
 
@@ -387,13 +394,14 @@
         flex-direction: column;
         align-items: center;
         gap: 16px;
+        color: var(--foreground1)
     }
 
     .year_container > #year_input {
         width: 90%;
         height: 16px;
         -webkit-appearance: none;
-        background: gray;
+        background: var(--background3);
         outline: none;
         border-radius: 8px;
     }
@@ -403,7 +411,8 @@
         appearance: none;
         width: 24px;
         height: 24px;
-        background: green;
+        background: var(--foreground2);
+        border: none;
         cursor: pointer;
         outline: none;
         border-radius: 12px;
@@ -460,7 +469,7 @@
     #resultMap {
         width: 400px;
         max-height: 400px;
-        background-color: green;
+        /* background-image: url({LOADING_IMAGE}); */
     }
 
     @media only screen and (max-width: 768px) {
@@ -485,6 +494,7 @@
             width: 100%;
             padding: 16px 0px 32px 0px;
             gap: 0px;
+            color: var(--foreground1);
         }
 
         .map_container {
@@ -548,7 +558,7 @@
             <div class="score_menu_score_value">{score}</div>
         </div>
         <div>
-            <canvas id="resultMap" bind:this={resultMap} use:onCanvasLoad width=4354 height=4354 />
+            <canvas id="resultMap" bind:this={resultMap} use:onCanvasLoad width=4354 height=4354 style="background-image: url({LOADING_IMAGE});" />
         </div>
         {#if gameMode == "time_travel"}
             <div>

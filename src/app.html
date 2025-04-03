@@ -10,7 +10,11 @@
 
 			/* Global variables */
 			:root {
-				
+				--background1: #ffffff;
+				--background2: #000000;
+				--background3: #1f1f1f;
+				--foreground1: #c5c5c5;
+				--foreground2: #ff1f1f;
 			}
 
             html {
@@ -21,6 +25,7 @@
 				margin: 0;
 				font-family: "Inter", sans-serif;
                 overflow-x: hidden;
+				background-color: var(--background3);
 			}
 
 			a {
@@ -28,7 +33,8 @@
 			}
 
 			.content {
-				background-color: bisque;
+				background-color: var(--background2);
+				color: var(--foreground1);
 				width: 768px;
 				min-height: 512px;
 				margin: 32px auto 0px auto;
@@ -50,7 +56,6 @@
 				width: 500px;
 				min-height: 80%;
                 max-height: fit-content;
-				background-color: white;
 				left: 50%;
 				top: 50%;
 				transform: translate(-50%, -50%);
@@ -58,6 +63,8 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: space-evenly;
+				background-color: var(--background1);
+				/* color: var(--foreground1); */
 			}
 
 			.pop_up > .pop_up_heading {

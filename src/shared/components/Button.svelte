@@ -7,19 +7,19 @@
         font-size: 20px;
         font-weight: 800;
         border-width: 1px;
-        border-color: green;
         border-style: solid;
         border-radius: 8px;
-        background: green;
-        color: white;
         transition: 100ms;
         position: relative;
         cursor: pointer;
+        background: var(--foreground2);
+        border-color: var(--foreground2);
+        color: var(--background1);
     }
 
     button:hover {
         background: transparent;
-        color: green;
+        color: var(--foreground2);
     }
 </style>
 <div>

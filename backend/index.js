@@ -125,9 +125,16 @@ app.post("/api/round_image", (req, res) => {
         return;
     }
 
+    // Image caching
+    const sendFile = (filePath) => res.sendFile(filePath, {
+        cacheControl: true,
+        maxAge: "7 days",
+        immutable: true
+    });
+
     // Check if image was already selected
     if (activeGames[gameMode][sessionId].history.length == activeGames[gameMode][sessionId].round_iterator + 1) {
-        res.sendFile(`${__dirname}/images/${gameMode}/${activeGames[gameMode][sessionId].history.at(-1)}`);
+        sendFile(`${__dirname}/images/${gameMode}/${activeGames[gameMode][sessionId].history.at(-1)}`);
         return;
     }
 
@@ -142,7 +149,7 @@ app.post("/api/round_image", (req, res) => {
             activeGames[gameMode][sessionId].history.push(imageName);
         }
     }
-    res.sendFile(`${__dirname}/images/${gameMode}/${imageName}`);
+    sendFile(`${__dirname}/images/${gameMode}/${imageName}`);
 });
 
 // Single round submission

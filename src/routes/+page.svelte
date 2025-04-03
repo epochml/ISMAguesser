@@ -40,7 +40,7 @@
     .intro {
         flex-direction: column;
         height: 100vh;
-        background-image: url("/images/DSC00593.webp");
+        background-image: url("/images/main_bg.webp");
         background-position: center;
         background-size: cover;
     }

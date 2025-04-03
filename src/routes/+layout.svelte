@@ -9,7 +9,8 @@
         justify-content: space-between;
         width: calc(100% - 16px);
         max-height: 32px;
-        background-color: green;
+        background-color: var(--background2);
+        color: var(--foreground1);
         padding: 8px;
         z-index: 99;
     }
@@ -28,12 +29,16 @@
         position: relative;
         margin: 0px;
         padding: 0px;
+        color: var(--foreground1);
+        font-weight: 700;
     }
 
     #nav_logo {
-        width: 100px;
+        width: fit-content;
+        width: 62px;
         height: 32px;
-        background-color: blue;
+        background-image: url("/images/logo_32px.webp");
+        background-size: contain;
     }
 
     #nav_padding {

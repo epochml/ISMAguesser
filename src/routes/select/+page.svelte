@@ -67,6 +67,7 @@
         display: flex;
         justify-content: space-evenly;
         padding: 0px 16px 0px 16px;
+        color: var(--foreground1);
     }
 
     .content > div {

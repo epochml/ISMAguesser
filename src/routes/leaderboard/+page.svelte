@@ -41,7 +41,7 @@
 
     .leaderboard > .leaderboard_item {
         padding: 16px;
-        border-bottom: 1px #c4c4c4 solid;
+        border-bottom: 1px var(--background3) solid;
     }
 
     .leaderboard > .leaderboard_item > div {
