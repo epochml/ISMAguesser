@@ -329,13 +329,14 @@
 
     .controls_container {
         padding: 16px;
-        background-color: var(--background2);
         width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         gap: 64px;
+        background-color: var(--background2);
+        color: var(--foreground1);
     }
 
     .info_container {
@@ -494,7 +495,6 @@
             width: 100%;
             padding: 16px 0px 32px 0px;
             gap: 0px;
-            color: var(--foreground1);
         }
 
         .map_container {
