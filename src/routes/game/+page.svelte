@@ -368,6 +368,7 @@
         height: 400px;
         background-color: var(--background3);
         overflow: hidden;
+        touch-action: none;
     }
 
     .map_container > div {
