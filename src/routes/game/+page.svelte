@@ -329,7 +329,7 @@
 
     .controls_container {
         padding: 16px;
-        width: 400px;
+        width: 500px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -364,7 +364,7 @@
 
     .map_container {
         width: 100%;
-        height: 300px;
+        height: 400px;
         background-color: var(--background3);
         overflow: hidden;
     }
