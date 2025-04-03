@@ -55,7 +55,8 @@
     function initPanzoom(node) {
         instance = panzoom(node, {
             bounds: true,
-            onClick: touchHandler
+            onClick: touchHandler,
+            onTouch: (e) => {},
         });
     }
 
