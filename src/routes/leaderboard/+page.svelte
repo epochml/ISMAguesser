@@ -1,9 +1,15 @@
 <svelte:options runes={true} />
 <script>
     import { onMount } from "svelte";
+    import Button from "../../shared/components/Button.svelte";
 
     let SERVER_HOST = "";
     let leaderboards = $state([]);
+
+    let outerWidth = $state(0);
+    let innerWidth = $state(0);
+    let outerHeight = $state(0);
+    let innerHeight = $state(0);
 
     onMount(async () => {
         SERVER_HOST = await (await fetch("/server_host")).text();
@@ -77,6 +83,7 @@
         }
     }
 </style>
+<svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 <div class="content">
     <h2>Weekly Leaderboard</h2>
     {#each Object.keys(leaderboards) as leaderboardName, _}
@@ -96,4 +103,7 @@
             {/each}
         </div>
     {/each}
+    {#if innerWidth <= 768}
+        <Button text="Return" action={() => {location.href = "/"}} style="display: flex; justify-content: center;" />
+    {/if}
 </div>

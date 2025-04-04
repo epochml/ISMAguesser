@@ -1,5 +1,6 @@
 <script>
     let props = $props();
+    console.log(props.style)
 </script>
 <style>
     button {
@@ -22,6 +23,6 @@
         color: var(--foreground2);
     }
 </style>
-<div>
+<div style={props.style}>
     <button style={props.style} onclick={props.action}>{props.text}</button>
 </div>

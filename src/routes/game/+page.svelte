@@ -24,6 +24,11 @@
     let roundScoreMenu = $state(false);
     let matchScoreMenu = $state(false);
 
+    let outerWidth = $state(0);
+	let innerWidth = $state(0);
+	let outerHeight = $state(0);
+	let innerHeight = $state(0);
+
     let yearInput;
     let yearInputValue = $state(1992);
     let answerYear = 0;
@@ -37,6 +42,11 @@
     let mapPin;
     let pinLocation = [MAP_LENGTH / 2, MAP_LENGTH / 2];
     let zoomLevel = 1.0;
+
+    let viewToggle = $state(false);
+    let buttonText = $derived(viewToggle ? "Close map" : "Open map")
+    let controlsContainerDisplay = $derived(!viewToggle && innerWidth <= 768 ? "none" : "flex");
+    let imageContainerDisplay = $derived(viewToggle && innerWidth <= 768 ? "none" : "flex");
 
     const updatePinZoom = () => {
         console.log(pinLocation)
@@ -425,6 +435,11 @@
         font-size: 20px;
     }
 
+    .submit_button_container {
+        display: flex;
+        justify-content: center;
+    }
+
     .score_menu {
 
     }
@@ -475,11 +490,18 @@
         /* background-image: url({LOADING_IMAGE}); */
     }
 
+    .view_toggle_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 96px;
+    }
+
     @media only screen and (max-width: 768px) {
         .game_view {
             position: relative;
             width: 100%;
-            height: fit-content;
+            height: 100dvh;
             margin: 0px;
             flex-direction: column;
         }
@@ -490,17 +512,25 @@
         }
 
         .image_container > div {
-            width: 100%;
+            width: auto;
         }
 
         .info_container, .controls_container {
             width: 100%;
             padding: 16px 0px 32px 0px;
-            gap: 0px;
+            gap: 16px;
+        }
+
+        .controls_container {
+            display: none;
+            padding: 0px;
+            height: 100%;
         }
 
         .map_container {
-            width: 90%;
+            min-height: 300px;
+            max-height: 500px;
+            height: inherit;
         }
 
         .submit_button_container, .year_container {
@@ -514,13 +544,14 @@
         }
     }
 </style>
+<svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 <div class="game_view">
-    <div class="image_container">
+    <div class="image_container" style="display: {imageContainerDisplay}">
         <div>
             <img id="image" src="{imageLink}" />
         </div>
     </div>
-    <div class="controls_container">
+    <div class="controls_container" style="display: {controlsContainerDisplay}">
         <div class="info_container">
             <div class="info_stat">
                 <div class="round label">Round</div>
@@ -551,6 +582,11 @@
             <Button text="Submit" action={submitRound} />
         </div>
     </div>
+    {#if innerWidth <= 768}
+        <div class="view_toggle_container">
+            <Button text={buttonText} action={() => {viewToggle = !viewToggle}} style="width: calc(100% - 16px); display: flex; justify-content: center;" />
+        </div>
+    {/if}
 </div>
 {#if roundScoreMenu}
     <div class="pop_up_bg"></div>
