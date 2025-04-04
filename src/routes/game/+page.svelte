@@ -49,13 +49,20 @@
     let imageContainerDisplay = $derived(viewToggle && innerWidth <= 768 ? "none" : "flex");
 
     const updatePinZoom = () => {
-        console.log(pinLocation)
+        console.log(pinLocation);
         mapPin.style.transform = `matrix(${1.0 / zoomLevel}, 0, 0, ${1.0 / zoomLevel}, ${pinLocation[0] - 32}, ${pinLocation[1] - 32}) translate(calc(0% + 0px), calc(-50% + 0px))`;
     }
 
     const touchHandler = (e) => {
         if (e.target.id == "map_background") {
-            pinLocation = [e.layerX, e.layerY];
+            // MouseEvent.layerX has been deprecated
+            // pinLocation = [e.layerX, e.layerY];
+
+            // LayerX/LayerY calculation (tested on Gecko and V8, win11)
+            pinLocation = [
+                (e.clientX - e.target.getBoundingClientRect().x) / zoomLevel,
+                (e.clientY - e.target.getBoundingClientRect().y) / zoomLevel
+            ];
             updatePinZoom();
         }
         return true;

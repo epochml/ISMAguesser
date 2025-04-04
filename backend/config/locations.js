@@ -310,7 +310,7 @@ export default {
         // },
         "20250130_164642.webp": {
             "location": {
-                "place": -1,
+                "place": 0,
                 "x": 201,
                 "y": 38
             },
