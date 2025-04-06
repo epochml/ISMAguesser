@@ -48,8 +48,25 @@
     let controlsContainerDisplay = $derived(!viewToggle && innerWidth <= 768 ? "none" : "flex");
     let imageContainerDisplay = $derived(viewToggle && innerWidth <= 768 ? "none" : "flex");
 
+    const places = [
+        {label: "Main Building - 1st floor", value: "0", image: "/images/main_f1.webp"},
+        {label: "Main Building - 2nd floor", value: "1", image: "/images/main_f2.webp"},
+    ];
+    let selectPlaceValue = $state("0");
+    let currentMapImage = $derived.by(() => {
+        for (let place of places) {
+            if (place.value == selectPlaceValue) {
+                return place.image;
+            }
+        }
+        return LOADING_IMAGE;
+    });
+    // $effect(() => {
+    //     const parsedPlace = parseInt(selectPlaceValue);
+
+    // });
+
     const updatePinZoom = () => {
-        console.log(pinLocation);
         mapPin.style.transform = `matrix(${1.0 / zoomLevel}, 0, 0, ${1.0 / zoomLevel}, ${pinLocation[0] - 32}, ${pinLocation[1] - 32}) translate(calc(0% + 0px), calc(-50% + 0px))`;
     }
 
@@ -273,7 +290,7 @@
                 "game_session_id": getCookie("game_session_id"),
                 "game_mode": gameMode,
                 "location": {
-                    "place": 0,
+                    "place": parseInt(selectPlaceValue),
                     "x": pinLocation[0],
                     "y": pinLocation[1]
                 },
@@ -380,6 +397,15 @@
         font-weight: 900;
     }
 
+    .map_place_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        font-size: 20px;
+    }
+
     .map_container {
         width: 100%;
         height: 400px;
@@ -392,10 +418,18 @@
         position: relative;
     }
 
+    .place_container {
+        display: flex;
+        gap: 16px;
+    }
+
+    #place_input {
+        font-size: 20px;
+    }
+
     #map_background {
         width: 300px;
         height: 300px;
-        background: url("/images/main_f1.webp");
         background-size: cover;
     }
 
@@ -534,6 +568,12 @@
             height: 100%;
         }
 
+        .map_place_container {
+            min-height: 300px;
+            max-height: 500px;
+            height: inherit;
+        }
+
         .map_container {
             min-height: 300px;
             max-height: 500px;
@@ -573,10 +613,20 @@
                 <div id="score_value" class="value">{totalScore}</div>
             </div>
         </div>
-        <div class="map_container">
-            <div id="map_panzoom" use:initPanzoom bind:this={mapPanzoom}>
-                <div id="map_pin" bind:this={mapPin}></div>
-                <div id="map_background" style="width: {MAP_LENGTH}px; height: {MAP_LENGTH}px"></div>
+        <div class="map_place_container">
+            <div class="map_container">
+                <div id="map_panzoom" use:initPanzoom bind:this={mapPanzoom}>
+                    <div id="map_pin" bind:this={mapPin}></div>
+                    <div id="map_background" style="width: {MAP_LENGTH}px; height: {MAP_LENGTH}px; background-image: url({currentMapImage});" ></div>
+                </div>
+            </div>
+            <div class="place_container">
+                <!-- <div class="place_label">Select place</div> -->
+                <select id="place_input" bind:value={selectPlaceValue}>
+                    {#each places as place, i}
+                        <option value="{place.value}">{place.label}</option>
+                    {/each}
+                </select>
             </div>
         </div>
         {#if gameMode == "time_travel"}
