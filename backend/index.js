@@ -275,9 +275,8 @@ app.get("/api/statistics", async (req, res) => {
     res.setHeader("Content-Type", "application/json");
     let stats = await getStatistics();
     stats.images = 0;
-    for (const gameMode of Object.keys(activeGames)) {
-        let imagesDir = await fs.readdir(`${__dirname}/images/${gameMode}`);
-        stats.images += imagesDir.length;
+    for (const gameMode of Object.keys(locations)) {
+        stats.images += Object.keys(locations[gameMode]).length;
     }
     res.end(JSON.stringify(stats));
 });
