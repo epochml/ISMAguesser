@@ -6,9 +6,11 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 import { randomID, getEpochUTC, sanitizeNickname } from "./helper.js";
-import settings from "./config/settings.js";
-import locations from "./config/locations.js";
 import { addWeeklyLeaderboardEntry, getStatistics, getWeeklyLeaderboardTop10 } from './db.js';
+import settings from "./config/settings.js";
+import standardLocations from "./config/locations/standard.js";
+import timeTravelLocations from "./config/locations/time_travel.js";
+import weeklyLocations from "./config/locations/weekly.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +26,13 @@ let activeGames = {
     "standard": {},
     "time_travel": {},
     "weekly": {}
+};
+
+// All locations in one variable
+const locations = {
+    "standard": standardLocations,
+    "time_travel": timeTravelLocations,
+    "weekly": weeklyLocations
 };
 
 app.get("/test", (req, res) => {
@@ -180,6 +189,7 @@ app.post("/api/submit_round", (req, res) => {
 
     // Calculating score:
     // If place is correct, `place_score` points are added
+    // Except when it involves the two floors in main building, then distance score counts (but perhaps not place score)
     // Then, any distance to the correct point is added based on `distance_score`
     let score = 0;
     const imageName = activeGames[gameMode][sessionId].history.at(-1);
@@ -190,7 +200,8 @@ app.post("/api/submit_round", (req, res) => {
     score += placeScore;
 
     const distance = Math.sqrt((locationGuess.x - locationAnswer.x) * (locationGuess.x - locationAnswer.x) + (locationGuess.y - locationAnswer.y) * (locationGuess.y - locationAnswer.y));
-    const distanceScore = placeScore > 0 ? settings[gameMode].distance_score * Math.max(0, (settings.general.max_distance - distance) / settings.general.max_distance) : 0;
+    const isDistanceCounted = placeScore > 1 || (locationGuess.place === 0 && locationAnswer.place === 1) || (locationGuess.place === 1 && locationAnswer.place === 0);
+    const distanceScore = isDistanceCounted ? settings[gameMode].distance_score * Math.max(0, (settings.general.max_distance - distance) / settings.general.max_distance) : 0;
     score += distanceScore;
 
     let yearAnswer = 0;

@@ -61,10 +61,6 @@
         }
         return LOADING_IMAGE;
     });
-    // $effect(() => {
-    //     const parsedPlace = parseInt(selectPlaceValue);
-
-    // });
 
     const updatePinZoom = () => {
         mapPin.style.transform = `matrix(${1.0 / zoomLevel}, 0, 0, ${1.0 / zoomLevel}, ${pinLocation[0] - 32}, ${pinLocation[1] - 32}) translate(calc(0% + 0px), calc(-50% + 0px))`;
