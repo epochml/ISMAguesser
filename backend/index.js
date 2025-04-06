@@ -199,7 +199,8 @@ app.post("/api/submit_round", (req, res) => {
     const placeScore = locationGuess.place === locationAnswer.place ? settings[gameMode].place_score : 0;
     score += placeScore;
 
-    const distance = Math.sqrt((locationGuess.x - locationAnswer.x) * (locationGuess.x - locationAnswer.x) + (locationGuess.y - locationAnswer.y) * (locationGuess.y - locationAnswer.y));
+    let distance = Math.sqrt((locationGuess.x - locationAnswer.x) * (locationGuess.x - locationAnswer.x) + (locationGuess.y - locationAnswer.y) * (locationGuess.y - locationAnswer.y));
+    distance = distance < 1.0 ? 0 : distance; // Round distance if very close so player can get perfect score
     const isDistanceCounted = placeScore > 1 || (locationGuess.place === 0 && locationAnswer.place === 1) || (locationGuess.place === 1 && locationAnswer.place === 0);
     const distanceScore = isDistanceCounted ? settings[gameMode].distance_score * Math.max(0, (settings.general.max_distance - distance) / settings.general.max_distance) : 0;
     score += distanceScore;

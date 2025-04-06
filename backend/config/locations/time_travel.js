@@ -99,26 +99,16 @@ export default {
             "year": 2011
         }
     },
-    // "Robotics_Engineering_Ph17.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2013
-    //     }
-    // },
-    // "Angelou_DC.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 1993
-    //     }
-    // },
+    "Angelou_DC.webp": {
+        "location": {
+            "place": 0,
+            "x": 123.18923202710972,
+            "y": 238.11572806246878
+        },
+        "date": {
+            "year": 1993
+        }
+    },
     "Photo11.webp": {
         "location": {
             "place": 0,
@@ -149,16 +139,16 @@ export default {
             "year": 2000
         }
     },
-    // "Scan_18.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2000
-    //     }
-    // },
+    "Scan_18.webp": {
+        "location": {
+            "place": 0,
+            "x": 188.12753070753254,
+            "y": 32.721074509429215
+        },
+        "date": {
+            "year": 2000
+        }
+    },
     "IMG_2841.webp": {
         "location": {
             "place": 0,
@@ -199,16 +189,16 @@ export default {
             "year": 2016
         }
     },
-    // "Scan_8.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2000
-    //     }
-    // },
+    "Scan_8.webp": {
+        "location": {
+            "place": 0,
+            "x": 186.24650953206455,
+            "y": 58.17914558801316
+        },
+        "date": {
+            "year": 2000
+        }
+    },
     "Scan_12.webp": {
         "location": {
             "place": 0,
@@ -279,26 +269,26 @@ export default {
             "year": 1989
         }
     },
-    // "DSC_0255.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2013
-    //     }
-    // },
-    // "Chicago_Field_Office_Re_Opening_1212_043.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2013
-    //     }
-    // },
+    "DSC_0255.webp": {
+        "location": {
+            "place": 0,
+            "x": 139.37611619133693,
+            "y": 217.39724557987608
+        },
+        "date": {
+            "year": 2013
+        }
+    },
+    "Chicago_Field_Office_Re_Opening_1212_043.webp": {
+        "location": {
+            "place": 0,
+            "x": 206.29275230417426,
+            "y": 97.9244998124125
+        },
+        "date": {
+            "year": 2013
+        }
+    },
     "TALENT_with_Sam_Yegan.webp": {
         "location": {
             "place": 0,
@@ -309,26 +299,26 @@ export default {
             "year": 2013
         }
     },
-    // "_DX_7616.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2015
-    //     }
-    // },
-    // "IMSA_Teacher_Students_Lab.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": -1,
-    //         "y": -1
-    //     },
-    //     "date": {
-    //         "year": 2004
-    //     }
-    // },
+    "_DX_7616.webp": {
+        "location": {
+            "place": 0,
+            "x": 110.97536633053801,
+            "y": 70.44913697308044
+        },
+        "date": {
+            "year": 2015
+        }
+    },
+    "IMSA_Teacher_Students_Lab.webp": {
+        "location": {
+            "place": 0,
+            "x": 66.64158280968493,
+            "y": 91.28601232459037
+        },
+        "date": {
+            "year": 2004
+        }
+    },
     "Grainger_LabDC.webp": {
         "location": {
             "place": 0,
