@@ -51,11 +51,19 @@
     const places = [
         {label: "Main Building - 1st floor", value: "0", image: "/images/main_f1.webp"},
         {label: "Main Building - 2nd floor", value: "1", image: "/images/main_f2.webp"},
+        {label: "Campus", value: "2", image: "/images/campus.webp"},
+        {label: "01 - Both floors", value: "1501", image: "/images/hall.webp"},
+        {label: "02 - Both floors", value: "1502", image: "/images/hall.webp"},
+        {label: "03 - Both floors", value: "1503", image: "/images/hall.webp"},
+        {label: "04 - Both floors", value: "1504", image: "/images/hall.webp"},
+        {label: "05 - Both floors", value: "1505", image: "/images/hall.webp"},
+        {label: "06 - Both floors", value: "1506", image: "/images/hall.webp"},
+        {label: "07 - Both floors", value: "1507", image: "/images/hall.webp"},
     ];
     let selectPlaceValue = $state("0");
     let currentMapImage = $derived.by(() => {
         for (let place of places) {
-            if (place.value == selectPlaceValue) {
+            if (place.value == selectPlaceValue) { 
                 return place.image;
             }
         }
@@ -304,10 +312,11 @@
             totalScore = gameData.score;
             answerLocation = json.answer_location;
             answerPlace = json.answer_place;
-            answerYear = json.answer_year
-            roundEnded = true;
+            answerYear = json.answer_year;
 
+            roundEnded = true;
             roundScoreMenu = true;
+            viewToggle = false;
         });
     }
 

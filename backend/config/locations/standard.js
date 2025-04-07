@@ -587,27 +587,27 @@ export default {
     //         "y": 0
     //     },
     // },
-    "DSC00292_3.webp": {
-        "location": {
-            "place": 2,
-            "x": 0,
-            "y": 0
-        },
-    },
-    "DSC00302.webp": {
-        "location": {
-            "place": 2,
-            "x": 0,
-            "y": 0
-        },
-    },
-    "DSC00593.webp": {
-        "location": {
-            "place": 2,
-            "x": 0,
-            "y": 0
-        },
-    },
+    // "DSC00292_3.webp": {
+    //     "location": {
+    //         "place": 2,
+    //         "x": 0,
+    //         "y": 0
+    //     },
+    // },
+    // "DSC00302.webp": {
+    //     "location": {
+    //         "place": 2,
+    //         "x": 0,
+    //         "y": 0
+    //     },
+    // },
+    // "DSC00593.webp": {
+    //     "location": {
+    //         "place": 2,
+    //         "x": 0,
+    //         "y": 0
+    //     },
+    // },
     "DSC02552.webp": {
         "location": {
             "place": 0,
