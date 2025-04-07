@@ -556,7 +556,7 @@ export default {
             "y": 74.9072818311728
         },
         "date": {
-            "year": 2025
+            "year": 2024
         }
     },
     // "Screenshot 2025-04-06 024517.webp": {

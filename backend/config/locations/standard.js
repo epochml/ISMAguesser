@@ -699,11 +699,56 @@ export default {
             "y": 173.43524557488433
         },
     },
+
+
+
+
+
+
+
     
-
-
-
-
+    "ac_pit_mural.webp": {
+        "location": {
+            "place": 0,
+            "x": 165.608382821251,
+            "y": 49.81136525838658
+        },
+    },
+    "battery_poster.webp": {
+        "location": {
+            "place": 0,
+            "x": 114.37307283704298,
+            "y": 100.58904990866219
+        },
+    },
+    "cac_commons_painting.webp": {
+        "location": {
+            "place": 0,
+            "x": 142.16623397544757,
+            "y": 93.45260095106372
+        },
+    },
+    "concessions.webp": {
+        "location": {
+            "place": 0,
+            "x": 127.03789974810297,
+            "y": 191.12823053690704
+        },
+    },
+    "estie_office.webp": {
+        "location": {
+            "place": 0,
+            "x": 217.11493349226598,
+            "y": 87.8351036119406
+        },
+    },
+    "in2_hallway.webp": {
+        "location": {
+            "place": 0,
+            "x": 141.6880430291514,
+            "y": 169.052899481929
+        },
+    }
     // "test.webp": {
     //     "location": {
     //         "place": 0,
