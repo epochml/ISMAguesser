@@ -459,16 +459,16 @@ export default {
             "year": 2014
         }
     },
-    // "Screenshot-2025-02-11-092316-777x437.webp": {
-    //     "location": {
-    //         "place": 0,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2025
-    //     }
-    // },
+    "Screenshot-2025-02-11-092316-777x437.webp": {
+        "location": {
+            "place": 1504,
+            "x": 127.82849228145513,
+            "y": 158.29871617347897
+        },
+        "date": {
+            "year": 2025
+        }
+    },
     "Senior-U-Bench.webp": {
         "location": {
             "place": 0,
@@ -529,16 +529,16 @@ export default {
             "year": 2025
         }
     },
-    // "Screenshot 2025-04-06 022306.webp": {
-    //     "location": {
-    //         "place": 1503,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2025
-    //     }
-    // },
+    "Screenshot 2025-04-06 022306.webp": {
+        "location": {
+            "place": 1503,
+            "x": 116.48775556810601,
+            "y": 137.63721268724603
+        },
+        "date": {
+            "year": 2025
+        }
+    },
     "Screenshot 2025-04-06 022447.webp": {
         "location": {
             "place": 0,
@@ -569,16 +569,16 @@ export default {
     //         "year": 2022
     //     }
     // },
-    // "Screenshot 2025-04-06 024640.webp": {
-    //     "location": {
-    //         "place": 2,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2022
-    //     }
-    // },
+    "Screenshot 2025-04-06 024640.webp": {
+        "location": {
+            "place": 2,
+            "x": 88.8772227313453,
+            "y": 83.51678122353505
+        },
+        "date": {
+            "year": 2022
+        }
+    },
     "Screenshot 2025-04-06 025005.webp": {
         "location": {
             "place": 1,
@@ -589,16 +589,16 @@ export default {
             "year": 2022
         }
     },
-    // "Screenshot 2025-04-06 025324.webp": {
-    //     "location": {
-    //         "place": 1505,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2022
-    //     }
-    // },
+    "Screenshot 2025-04-06 025324.webp": {
+        "location": {
+            "place": 1505,
+            "x": 113.1299022715951,
+            "y": 125.13987112340736
+        },
+        "date": {
+            "year": 2022
+        }
+    },
     // "Screenshot 2025-04-06 025522.webp": {
     //     "location": {
     //         "place": 2,
