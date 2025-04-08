@@ -140,7 +140,7 @@
 
     const drawResultMap = () => {
         resultMapCtx = resultMap.getContext("2d");
-        resultMapCtx.drawImage(mapImage, 0, 0, mapImage.width, mapImage.height);
+        // resultMapCtx.drawImage(mapImage, 0, 0, mapImage.width, mapImage.height);
         resultMapCtx.lineWidth = 40;
         resultMapCtx.strokeStyle = "#ff0049";
 
@@ -535,6 +535,7 @@
         width: 400px;
         max-height: 400px;
         /* background-image: url({LOADING_IMAGE}); */
+        background-size: contain;
     }
 
     .view_toggle_container {
@@ -659,7 +660,7 @@
             <div class="score_menu_score_value">{score}</div>
         </div>
         <div>
-            <canvas id="resultMap" bind:this={resultMap} use:onCanvasLoad width=4354 height=4354 style="background-image: url({LOADING_IMAGE});" />
+            <canvas id="resultMap" bind:this={resultMap} use:onCanvasLoad width=4354 height=4354 style="background-image: url({currentMapImage});" />
         </div>
         {#if gameMode == "time_travel"}
             <div>
