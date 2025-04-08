@@ -559,16 +559,16 @@ export default {
             "year": 2024
         }
     },
-    // "Screenshot 2025-04-06 024517.webp": {
-    //     "location": {
-    //         "place": 1502,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2022
-    //     }
-    // },
+    "Screenshot 2025-04-06 024517.webp": {
+        "location": {
+            "place": 1502,
+            "x": 128.62644880466704,
+            "y": 157.76434351743796
+        },
+        "date": {
+            "year": 2022
+        }
+    },
     "Screenshot 2025-04-06 024640.webp": {
         "location": {
             "place": 2,
@@ -599,26 +599,26 @@ export default {
             "year": 2022
         }
     },
-    // "Screenshot 2025-04-06 025522.webp": {
-    //     "location": {
-    //         "place": 2,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2023
-    //     }
-    // },
-    // "Screenshot 2025-04-06 025606.webp": {
-    //     "location": {
-    //         "place": 1505,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2023
-    //     }
-    // },
+    "Screenshot 2025-04-06 025522.webp": {
+        "location": {
+            "place": 2,
+            "x": 187.64142308910516,
+            "y": 73.85828921421286
+        },
+        "date": {
+            "year": 2023
+        }
+    },
+    "Screenshot 2025-04-06 025606.webp": {
+        "location": {
+            "place": 1505,
+            "x": 126.93807645173943,
+            "y": 172.47656647776867
+        },
+        "date": {
+            "year": 2023
+        }
+    },
     "Screenshot 2025-04-06 025651.webp": {
         "location": {
             "place": 0,
@@ -629,36 +629,36 @@ export default {
             "year": 2024
         }
     },
-    // "Screenshot 2025-04-06 025812.webp": {
-    //     "location": {
-    //         "place": 1504,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2011
-    //     }
-    // },
-    // "Screenshot 2025-04-06 025857.webp": {
-    //     "location": {
-    //         "place": 1504,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2011
-    //     }
-    // },
-    // "Screenshot 2025-04-06 030011.webp": {
-    //     "location": {
-    //         "place": 2,
-    //         "x": 0,
-    //         "y": 0
-    //     },
-    //     "date": {
-    //         "year": 2006
-    //     }
-    // },
+    "Screenshot 2025-04-06 025812.webp": {
+        "location": {
+            "place": 1504,
+            "x": 85.03013858026642,
+            "y": 119.40577568165611
+        },
+        "date": {
+            "year": 2011
+        }
+    },
+    "Screenshot 2025-04-06 025857.webp": {
+        "location": {
+            "place": 1504,
+            "x": 123.77604101989951,
+            "y": 130.47215095519877
+        },
+        "date": {
+            "year": 2011
+        }
+    },
+    "Screenshot 2025-04-06 030011.webp": {
+        "location": {
+            "place": 2,
+            "x":  174.93791521289424,
+            "y": 75.09868979625527
+        },
+        "date": {
+            "year": 2006
+        }
+    },
     
 
 
