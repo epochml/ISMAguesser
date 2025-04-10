@@ -14,7 +14,7 @@ StartLimitInterval=0
 [Service]
 User=$USER
 Type=simple
-ExecStart=$HOME/Projects/ISMAguesser/scripts/orangepi/ismaguesser-service.fish
+ExecStart=$HOME/Projects/ISMAguesser/scripts/ismaguesser-service.fish
 Restart=always
 RestartSec=5
 KillMode=process
