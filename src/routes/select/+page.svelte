@@ -33,10 +33,10 @@
         gameMode = selectGameMode.value;
         nickname = nicknameInput.value;
 
-        if (gameMode === "weekly" && getCookie("playedWeekly") === "1") {
-            playedWeeklyPopUp = true;
-            return;
-        }
+        // if (gameMode === "weekly" && getCookie("playedWeekly") === "1") {
+        //     playedWeeklyPopUp = true;
+        //     return;
+        // }
 
         const response = await fetch(`${SERVER_HOST}/api/create_match`, {
             method: "POST",
