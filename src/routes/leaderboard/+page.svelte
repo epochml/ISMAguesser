@@ -14,7 +14,11 @@
     onMount(async () => {
         SERVER_HOST = await (await fetch("/server_host")).text();
 
-        leaderboards = await (await fetch(`${SERVER_HOST}/api/leaderboard`)).json();
+        leaderboards = await (await fetch(`${SERVER_HOST}/api/leaderboard`, {
+            headers: {
+                "ngrok-skip-browser-warning": 1
+            }
+        })).json();
         for (const leaderboardName of Object.keys(leaderboards)) {
             if (leaderboards[leaderboardName].length === 0) {
                 leaderboards[leaderboardName].push({

@@ -113,7 +113,8 @@
         fetch(`${SERVER_HOST}/api/match_info`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "ngrok-skip-browser-warning": 1
             },
             body: JSON.stringify({
                 "game_session_id": getCookie("game_session_id"),
@@ -194,7 +195,8 @@
         fetch(`${SERVER_HOST}/api/round_image`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "ngrok-skip-browser-warning": 1
             },
             body: JSON.stringify({
                 "game_session_id": getCookie("game_session_id"),
@@ -220,7 +222,8 @@
             fetch(`${SERVER_HOST}/api/submit_match`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "ngrok-skip-browser-warning": 1
                 },
                 body: JSON.stringify({
                     "game_session_id": getCookie("game_session_id"),
@@ -244,7 +247,8 @@
         fetch(`${SERVER_HOST}/api/start_round`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "ngrok-skip-browser-warning": 1
             },
             body: JSON.stringify({
                 "game_session_id": getCookie("game_session_id"),
@@ -289,7 +293,8 @@
         fetch(`${SERVER_HOST}/api/submit_round`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "ngrok-skip-browser-warning": 1
             },
             body: JSON.stringify({
                 "game_session_id": getCookie("game_session_id"),

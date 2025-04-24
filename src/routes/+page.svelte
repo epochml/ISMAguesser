@@ -8,7 +8,11 @@
 
     onMount(async () => {
         SERVER_HOST = await (await fetch("/server_host")).text();
-        stats = await (await fetch(`${SERVER_HOST}/api/statistics`)).json();
+        stats = await (await fetch(`${SERVER_HOST}/api/statistics`, {
+            headers: {
+                "ngrok-skip-browser-warning": 1,
+            }
+        })).json();
     });
 </script>
 <style>
